@@ -1,9 +1,18 @@
 import "./styles.css";
 import getData from "./modules/data.js";
-import { checkInput, displayData } from "./modules/view.js";
+import { validateInput, displayData } from "./modules/view.js";
 
 const form = document.querySelector(".form");
 const input = document.getElementById("location");
 console.log(input);
 
-form.addEventListener("submit", () => {});
+input.addEventListener("input", () => {
+  validateInput(input);
+});
+
+form.addEventListener("submit", (e) => {
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    e.preventDefault();
+  }
+});

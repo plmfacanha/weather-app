@@ -18,6 +18,7 @@ const getData = async (city) => {
 };
 
 const convertData = async (res) => {
+  // res is an object
   return {
     temp: res.currentConditions.temp,
     description: res.description,

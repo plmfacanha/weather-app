@@ -1,7 +1,11 @@
-const displayData = (data) => {
-  console.log(data);
+const validateInput = (input) => {
+  if (input.validity.valueMissing) {
+    input.setCustomValidity("You need to type something!");
+  } else if (input.value.trim() === "") {
+    input.setCustomValidity("Cannot be only spaces!");
+  } else {
+    input.setCustomValidity("");
+  }
 };
 
-// const checkInput = (input) => {};
-
-export default { displayData, checkInput };
+export default { displayData, validateInput };

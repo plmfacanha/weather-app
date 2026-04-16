@@ -30,6 +30,8 @@
   --normal-spacing: 1rem;
   --large-spacing: 1.5rem;
   --xlarge-spacing: 2rem;
+
+  --soft-radius: 0.5rem;
 }
 
 /* =========================
@@ -89,14 +91,20 @@ main {
   background-color: var(--color-muted);
 }
 
-input {
-  padding: var(--xsmall-spacing);
-}
-
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: var(--small-spacing);
+}
+
+label {
+  color: var(--primary-light);
+}
+
+input {
+  padding: var(--xsmall-spacing);
+  border-radius: var(--soft-radius);
 }
 
 span {
@@ -154,10 +162,6 @@ select {
 
 input:focus {
   border: 2px solid blue;
-}
-
-input:invalid {
-  border: 2px solid red;
 }
 
 button {

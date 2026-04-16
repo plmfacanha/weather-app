@@ -11,12 +11,14 @@
       <h1>Weather App</h1>
     </header>
     <main>
-      <form class="form">
+      <form class="form" novalidate>
+        <label for="location">Location: </label>
         <input
           type="text"
           id="location"
           name="location"
           placeholder="Please type the location.."
+          pattern="^(?!\s*$).+"
           required
         />
         <button class="search-btn">Search</button>
