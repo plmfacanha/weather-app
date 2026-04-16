@@ -5,18 +5,21 @@ const url =
 const getData = async (city) => {
   try {
     const response = await fetch(`${url}${city}?key=${apiKey}`);
-    if (response.status === 200) {
-      const res = await response.json();
-      const data = convertData(res);
-      return data;
+    if (!response.ok) {
+      throw new Error("Failed to fetch data from the server!");
     }
+
+    const data = await response.json();
+    return convertData(data);
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
 
 const convertData = async (res) => {
   return {
+    temp: res.currentConditions.temp,
     description: res.description,
     currentConditions: res.currentConditions.conditions,
     latitude: res.latitude,

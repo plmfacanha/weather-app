@@ -1,6 +1,9 @@
 import "./styles.css";
 import getData from "./modules/data.js";
-import displayData from "./modules/view.js";
+import { checkInput, displayData } from "./modules/view.js";
 
-const data = await getData("Recife");
-displayData(data);
+const form = document.querySelector(".form");
+const input = document.getElementById("location");
+console.log(input);
+
+form.addEventListener("submit", () => {});

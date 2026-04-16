@@ -2,4 +2,6 @@ const displayData = (data) => {
   console.log(data);
 };
 
-export default displayData;
+const checkInput = (input) => {};
+
+export default { displayData, checkInput };
