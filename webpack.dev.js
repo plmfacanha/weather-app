@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-
   devtool: "eval-source-map",
-
   entry: "./src/index.js",
 
   output: {
@@ -23,11 +21,14 @@ module.exports = {
   ],
 
   devServer: {
-    static: "./dist", // folder to serve
-    open: true, // auto opens browser
-    hot: true, // enables hot reload
-    liveReload: true, // fallback reload
-    port: 3000, // optional
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    open: true,
+    hot: true,
+    liveReload: true,
+    watchFiles: ["src/**/*.html"],
+    port: 3000,
     client: {
       overlay: false,
     },
