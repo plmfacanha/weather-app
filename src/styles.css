@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* =========================
+   ROOT VARIABLES
+   ========================= */
+
+:root {
+  /* Font */
+  --font-main: "Inter", sans-serif;
+  --text-size-small: 0.875rem;
+  --text-size-normal: 1rem;
+  --text-size-large: 2rem;
+
+  /* Colors */
+  --primary-dark: #14080e;
+  --primary-light: #ffffff;
+
+  --color-muted: #49475b;
+  --color-calm: #799496;
+  --color-light: #acc196;
+  --color-accent: #e9eb9e;
+
+  /* Defaults */
+  --text-color: var(--primary-dark);
+  --background-color: var(--primary-dark);
+
+  /* Layout */
+  --max-width: 1100px;
+  --small-spacing: 0.5rem;
+  --normal-spacing: 1rem;
+  --large-spacing: 1.5rem;
+  --xlarge-spacing: 2rem;
+}
+
+/* =========================
+   RESET / BASE
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--text-size-normal);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: var(--large-spacing);
+}
+
+/* =========================
+   CLASSSES
+   ========================= */
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+  background-color: var(--primary-dark);
+  padding: var(--xlarge-spacing);
+}
+
+h1 {
+  font-size: var(--text-size-large);
+  text-align: center;
+}
+
+/* =========================
+MAIN
+========================= */
+
+main {
+  gap: var(--normal-spacing);
+  flex: 1;
+  background-color: var(--color-muted);
+}
+
+span {
+  color: var(--primary-light);
+}
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-light);
+  font-weight: 600;
+  line-height: var(--large-spacing);
+}
+
+/* =========================
+   MEDIA (RULE OF THUMB)
+   ========================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   LINKS & FORMS
+   ========================= */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+form,
+footer {
+  padding: var(--normal-spacing);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: var(--small-spacing);
+
+  background-color: var(--background-color);
+  border-top: 1px solid var(--primary-light);
+}
