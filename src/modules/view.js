@@ -2,7 +2,6 @@ const span = document.querySelector(".error-msg");
 
 const validateInput = (input) => {
   if (input.validity.valueMissing || input.value.trim() === "") {
-    // treat as empty
     input.setCustomValidity("This field cannot be empty!");
   } else {
     input.setCustomValidity("");
