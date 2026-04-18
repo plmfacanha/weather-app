@@ -85,8 +85,10 @@ main {
   align-items: center;
   gap: var(--normal-spacing);
   flex: 1;
-  background: url("./images/weather.jpg") center / cover no-repeat;
-  background-color: var(--color-muted);
+  background-image: url("./images/weather.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 form {
