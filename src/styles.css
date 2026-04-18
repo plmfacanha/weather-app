@@ -108,9 +108,23 @@ input {
 }
 
 span {
+  color: white;
+}
+
+.error-msg {
+  display: none;
+
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+
   color: var(--primary-light);
   background-color: red;
   border: 1px solid var(--primary-light);
+}
+
+.error-msg.show {
+  display: block;
 }
 /* =========================
    TYPOGRAPHY
