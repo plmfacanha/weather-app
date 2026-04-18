@@ -63,6 +63,55 @@ body {
 }
 
 /* =========================
+   HEADER
+   ========================= */
+header {
+  background-color: var(--primary-dark);
+  padding: var(--xlarge-spacing);
+}
+
+h1 {
+  font-size: var(--text-size-large);
+  text-align: center;
+}
+
+/* =========================
+MAIN
+========================= */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--normal-spacing);
+  flex: 1;
+  background: url("./images/weather.jpg") center / cover no-repeat;
+  background-color: var(--color-muted);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--small-spacing);
+  background-color: var(--color-light);
+  border-radius: var(--medium-radius);
+}
+
+label {
+  color: var(--primary-dark);
+}
+
+input {
+  padding: var(--xsmall-spacing);
+  border-radius: var(--soft-radius);
+}
+
+span {
+  color: white;
+}
+
+/* =========================
    CLASSSES
    ========================= */
 
@@ -91,49 +140,6 @@ body {
   border-radius: var(--medium-radius);
 
   background-color: var(--primary-light);
-}
-
-/* =========================
-   HEADER
-   ========================= */
-header {
-  background-color: var(--primary-dark);
-  padding: var(--xlarge-spacing);
-}
-
-h1 {
-  font-size: var(--text-size-large);
-  text-align: center;
-}
-
-/* =========================
-MAIN
-========================= */
-
-main {
-  gap: var(--normal-spacing);
-  flex: 1;
-  background-color: var(--color-muted);
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--small-spacing);
-}
-
-label {
-  color: var(--primary-light);
-}
-
-input {
-  padding: var(--xsmall-spacing);
-  border-radius: var(--soft-radius);
-}
-
-span {
-  color: white;
 }
 
 /* =========================
