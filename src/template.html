@@ -11,18 +11,18 @@
       <h1>Weather App</h1>
     </header>
     <main>
-      <form class="form" novalidate>
+      <form novalidate class="form">
         <label for="location">Location: </label>
         <input
           type="text"
           id="location"
           name="location"
           placeholder="Please type the location.."
-          pattern="^(?!\s*$).+"
           required
         />
         <button class="search-btn">Search</button>
       </form>
+      <span class="error-msg"></span>
     </main>
     <footer>
       <a href="https://github.com/plmfacanha" class="github-footer">

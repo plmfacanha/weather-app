@@ -1,6 +1,6 @@
 import "./styles.css";
-import getData from "./modules/data.js";
-import { validateInput, displayData } from "./modules/view.js";
+// import getData from "./modules/data.js";
+import validateInput from "./modules/view.js";
 
 const form = document.querySelector(".form");
 const input = document.getElementById("location");
@@ -11,8 +11,10 @@ input.addEventListener("input", () => {
 });
 
 form.addEventListener("submit", (e) => {
+  validateInput(input);
+
   if (!form.checkValidity()) {
-    form.reportValidity();
     e.preventDefault();
+    form.reportValidity();
   }
 });

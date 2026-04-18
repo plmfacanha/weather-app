@@ -109,6 +109,8 @@ input {
 
 span {
   color: var(--primary-light);
+  background-color: red;
+  border: 1px solid var(--primary-light);
 }
 /* =========================
    TYPOGRAPHY
@@ -162,6 +164,10 @@ select {
 
 input:focus {
   border: 2px solid blue;
+}
+
+input:invalid {
+  border: 2px solid red;
 }
 
 button {
