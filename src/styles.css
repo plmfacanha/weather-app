@@ -71,12 +71,13 @@ header {
   align-items: center;
   gap: var(--normal-spacing);
 
-  background-color: var(--color-muted);
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--primary-dark);
   padding: var(--normal-spacing);
 }
 
 h1 {
-  color: var(--primary-light);
+  color: var(--primary-dark);
   font-size: var(--text-size-large);
   text-align: center;
 }
@@ -117,7 +118,7 @@ input {
 }
 
 span {
-  color: white;
+  color: var(--primary-dark);
 }
 
 /* =========================
@@ -210,6 +211,12 @@ input:invalid {
 
 button {
   cursor: pointer;
+  transition: background-color 2s 500ms;
+}
+
+button:hover {
+  color: var(--primary-light);
+  background-color: var(--color-muted);
 }
 
 form,
@@ -222,6 +229,6 @@ footer {
   justify-content: center;
   gap: var(--small-spacing);
 
-  background-color: var(--color-muted);
-  border-top: 1px solid var(--primary-light);
+  background-color: var(--color-light);
+  border-top: 1px solid var(--primary-dark);
 }
