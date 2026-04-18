@@ -20,6 +20,7 @@ const getData = async (city) => {
 const convertData = async (res) => {
   // res is an object
   return {
+    city: res.resolvedAddress,
     temp: res.currentConditions.temp,
     description: res.description,
     currentConditions: res.currentConditions.conditions,
